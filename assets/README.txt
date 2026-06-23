@@ -1,0 +1,1 @@
+Thay logo V-PAY của bạn vào file assets/logo.png và thay ảnh minh họa bằng hero-finance.png nếu muốn.

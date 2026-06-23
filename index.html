@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>V-PAY Finance</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="topbar"><div class="container nav">
+<div class="logo">V-PAY <span>Tài chính của bạn</span></div>
+<a href="#calculator" class="btn">Tính khoản vay</a>
+</div></header>
+
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<h1>CÔNG CỤ TÍNH KHOẢN VAY THÔNG MINH</h1>
+<p>Tính nhanh, minh bạch và chuyên nghiệp.</p>
+<div class="contact">Hotline: <b>033 333 8388</b></div>
+<a href="#calculator" class="btn">Bắt đầu tính</a>
+</div>
+<div class="hero-card">V-PAY FINANCE</div>
+</div></section>
+
+<section class="container card" id="calculator">
+<h2>Tính khoản vay</h2>
+<div class="grid">
+<input id="loan" type="number" value="200000000" placeholder="Số tiền vay">
+<input id="rate" type="number" value="7" placeholder="Lãi suất %/tháng">
+<input id="months" type="number" value="12" placeholder="Kỳ hạn">
+<input id="date" type="date">
+</div>
+<button class="btn full" onclick="calculate()">TÍNH TOÁN</button>
+<div class="stats">
+<div class="stat"><span>Tổng tiền lãi</span><b id="totalInterest"></b></div>
+<div class="stat"><span>Tổng thanh toán</span><b id="totalPay"></b></div>
+<div class="stat"><span>Gốc hàng tháng</span><b id="monthlyPrincipal"></b></div>
+</div>
+<canvas id="chart"></canvas>
+<div class="table-wrap">
+<table id="tbl"><thead><tr><th>Kỳ</th><th>Ngày</th><th>Gốc</th><th>Lãi</th><th>Tổng</th><th>Dư nợ</th></tr></thead><tbody></tbody></table>
+</div>
+</section>
+<footer>© V-PAY Finance | Hotline 033 333 8388</footer>
+<script src="app.js"></script>
+</body></html>
