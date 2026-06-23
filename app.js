@@ -58,10 +58,13 @@ pieChart = new Chart(
                 backgroundColor:[
                     '#22c55e',
                     '#f97316'
-                ]
+                ],
+                borderWidth:0
             }]
         },
         options:{
+            responsive:true,
+            maintainAspectRatio:false,
             plugins:{
                 legend:{
                     position:'bottom'
