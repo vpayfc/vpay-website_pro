@@ -44,23 +44,5 @@ chart = new Chart(
     }
 );
 
-// PIE CHART
-if(pieChart) pieChart.destroy();
 
-pieChart = new Chart(
-    document.getElementById('pieChart'),
-    {
-        type:'doughnut',
-        data:{
-            labels:['Tiền gốc','Tiền lãi'],
-            datasets:[{
-                data:[loan,totalInterest],
-                backgroundColor:[
-                    '#22c55e',
-                    '#f97316'
-                ]
-            }]
-        }
-    }
-);
 calculate();
