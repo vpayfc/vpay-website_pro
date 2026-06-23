@@ -65,3 +65,18 @@ footer{text-align:center;padding:40px;color:#64748b}
     display: inline-block;
     margin-top: 20px;
 }
+.form-group{
+  display:flex;
+  flex-direction:column;
+}
+
+.form-group label{
+  font-size:15px;
+  font-weight:600;
+  color:#334155;
+  margin-bottom:8px;
+}
+
+.form-group input{
+  width:100%;
+}
