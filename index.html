@@ -30,10 +30,27 @@
 <section class="container card" id="calculator">
 <h2>Tính khoản vay</h2>
 <div class="grid">
-<input id="loan" type="number" value="200000000" placeholder="Số tiền vay">
-<input id="rate" type="number" value="7" placeholder="Lãi suất %/tháng">
-<input id="months" type="number" value="12" placeholder="Kỳ hạn">
-<input id="date" type="date">
+
+  <div class="form-group">
+    <label>Số tiền vay</label>
+    <input id="loan" type="number" placeholder="Nhập số tiền vay">
+  </div>
+
+  <div class="form-group">
+    <label>Phí và lãi suất (%/tháng)</label>
+    <input id="rate" type="number" value="7">
+  </div>
+
+  <div class="form-group">
+    <label>Kỳ hạn (tháng)</label>
+    <input id="months" type="number" value="12">
+  </div>
+
+  <div class="form-group">
+    <label>Ngày bắt đầu</label>
+    <input id="date" type="date">
+  </div>
+
 </div>
 <button class="btn full" onclick="calculate()">TÍNH TOÁN</button>
 <div class="stats">
