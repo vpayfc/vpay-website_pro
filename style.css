@@ -87,3 +87,33 @@ canvas#chart{
     margin:40px auto;
     display:block;
 }
+.charts-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+    margin-top:40px;
+}
+
+.chart-card{
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.chart-card h3{
+    margin-bottom:20px;
+    color:#0f172a;
+    font-size:20px;
+}
+
+.chart-card canvas{
+    width:100% !important;
+    height:350px !important;
+}
+
+@media(max-width:768px){
+    .charts-grid{
+        grid-template-columns:1fr;
+    }
+}
