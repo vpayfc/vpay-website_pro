@@ -16,7 +16,24 @@
 input{padding:14px;border:1px solid #dbe2ea;border-radius:12px}
 .full{width:100%;margin-top:15px}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;margin:25px 0}
-.stat{background:#f8fafc;padding:18px;border-radius:16px}
+.stat{
+  background:#fff;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+  display:flex;
+  flex-direction:column;
+}
+
+.stat span{
+  color:#64748b;
+  margin-bottom:8px;
+}
+
+.stat b{
+  font-size:30px;
+  color:#2e7d32;
+}
 .table-wrap{overflow:auto}
 table{width:100%;border-collapse:collapse}
 th,td{padding:10px;border-bottom:1px solid #e2e8f0;text-align:right}
