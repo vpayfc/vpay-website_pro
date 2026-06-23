@@ -1,6 +1,7 @@
 
 document.getElementById('date').value=new Date().toISOString().slice(0,10);
 let chart;
+let pieChart;
 function f(n){return Number(n).toLocaleString('vi-VN')+' đ';}
 function calculate(){
 const loan=+document.getElementById('loan').value||0;
@@ -25,6 +26,49 @@ document.getElementById('totalInterest').innerText=f(totalInterest);
 document.getElementById('totalPay').innerText=f(loan+totalInterest);
 document.getElementById('monthlyPrincipal').innerText=f(principal);
 if(chart) chart.destroy();
-chart=new Chart(document.getElementById('chart'),{type:'line',data:{labels:labels,datasets:[{label:'Tiền lãi',data:data,borderColor:'#2e7d32',tension:.4}]}})
+
+chart = new Chart(
+    document.getElementById('chart'),
+    {
+        type:'line',
+        data:{
+            labels,
+            datasets:[{
+                label:'Tiền lãi',
+                data,
+                borderColor:'#2e7d32',
+                tension:.4,
+                fill:false
+            }]
+        }
+    }
+);
+
+// PIE CHART
+if(pieChart) pieChart.destroy();
+
+pieChart = new Chart(
+    document.getElementById('pieChart'),
+    {
+        type:'doughnut',
+        data:{
+            labels:['Tiền gốc','Tiền lãi'],
+            datasets:[{
+                data:[loan,totalInterest],
+                backgroundColor:[
+                    '#22c55e',
+                    '#f97316'
+                ]
+            }]
+        },
+        options:{
+            plugins:{
+                legend:{
+                    position:'bottom'
+                }
+            }
+        }
+    }
+);
 }
 calculate();
