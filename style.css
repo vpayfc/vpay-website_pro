@@ -23,3 +23,18 @@ th,td{padding:10px;border-bottom:1px solid #e2e8f0;text-align:right}
 th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:center}
 footer{text-align:center;padding:40px;color:#64748b}
 @media(max-width:768px){.hero-grid{grid-template-columns:1fr}.hero h1{font-size:32px}.nav{flex-direction:column;gap:10px}}
+.logo img{
+  height:60px;
+}
+
+.hero-card{
+  background:#fff;
+  border-radius:24px;
+  padding:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.hero-card img{
+  width:100%;
+  border-radius:20px;
+}
